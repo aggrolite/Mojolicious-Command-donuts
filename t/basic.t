@@ -1,8 +1,6 @@
-use strict;
+use Mojo::Base -strict;
 use Test::More;
-use Mojolicious::Command::donuts;
 
-# replace with the actual test
-ok 1;
+use_ok('Mojolicious::Command::donuts');
 
 done_testing;
