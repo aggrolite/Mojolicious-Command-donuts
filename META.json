@@ -1,5 +1,5 @@
 {
-   "abstract" : "Blah blah blah",
+   "abstract" : "Find fresh donuts with Mojolicious!",
    "author" : [
       "Curtis Brandt <curtis@cpan.org>"
    ],
@@ -47,6 +47,17 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/aggrolite/Mojolicious-Command-donuts/issues"
+      },
+      "homepage" : "https://github.com/aggrolite/Mojolicious-Command-donuts",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/aggrolite/Mojolicious-Command-donuts.git",
+         "web" : "https://github.com/aggrolite/Mojolicious-Command-donuts"
+      }
+   },
    "version" : "0.01"
 }
 

@@ -131,7 +131,7 @@ __END__
 
 =head1 NAME
 
-Mojolicious::Command::donuts - Blah blah blah
+Mojolicious::Command::donuts - Find fresh donuts with Mojolicious!
 
 =head1 SYNOPSIS
 

@@ -1,6 +1,6 @@
 # NAME
 
-Mojolicious::Command::donuts - Blah blah blah
+Mojolicious::Command::donuts - Find fresh donuts with Mojolicious!
 
 # SYNOPSIS
 
