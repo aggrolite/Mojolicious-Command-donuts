@@ -2,5 +2,8 @@ Revision history for Mojolicious-Command-donuts
 
 {{$NEXT}}
 
+0.02  2015-06-14 12:09:25 PDT
+        - Fix tagline
+
 0.01  2015-06-14 12:06:25 PDT
         - Initial release
