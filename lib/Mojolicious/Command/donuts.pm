@@ -5,6 +5,8 @@ use Mojo::JSON qw(encode_json);
 use Mojo::Util qw(dumper);
 use Getopt::Long qw(GetOptionsFromArray);
 
+our $VERSION = 0.01;
+
 has description => 'Find fresh donuts near you!';
 
 has usage => <<EOF;
