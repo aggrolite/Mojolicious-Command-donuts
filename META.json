@@ -4,7 +4,7 @@
       "Curtis Brandt <curtis@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.034, Dist::Milla version v1.0.15, CPAN::Meta::Converter version 2.143240",
+   "generated_by" : "Dist::Zilla version 5.041, Dist::Milla version v1.0.15, CPAN::Meta::Converter version 2.150001",
    "license" : [
       "freebsd"
    ],
@@ -15,18 +15,18 @@
    "name" : "Mojolicious-Command-donuts",
    "no_index" : {
       "directory" : [
-         "t",
-         "xt",
+         "eg",
+         "examples",
          "inc",
          "share",
-         "eg",
-         "examples"
+         "t",
+         "xt"
       ]
    },
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : "0.039"
+            "Module::Build::Tiny" : "0.034"
          }
       },
       "develop" : {
@@ -43,7 +43,8 @@
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0.96"
+            "Test::More" : "0.96",
+            "WWW::KrispyKreme::HotLight" : "1.0"
          }
       }
    },
@@ -59,6 +60,9 @@
          "web" : "https://github.com/aggrolite/Mojolicious-Command-donuts"
       }
    },
-   "version" : "0.03"
+   "version" : "0.04",
+   "x_contributors" : [
+      "Curtis Brandt <cbrandt@apple.com>"
+   ]
 }
 

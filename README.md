@@ -31,7 +31,7 @@ to scrape results. However, patches are welcome!
 
 # AUTHOR
 
-Curtis Brandt <curtis@cpan.org>
+Curtis Brandt &lt;curtis@cpan.org>
 
 # COPYRIGHT
 

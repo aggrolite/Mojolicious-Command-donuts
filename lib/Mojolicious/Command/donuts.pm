@@ -6,7 +6,7 @@ use Mojo::Util qw(dumper);
 use Getopt::Long qw(GetOptionsFromArray);
 use WWW::KrispyKreme::HotLight;
 
-our $VERSION = 0.03;
+our $VERSION = 0.04;
 
 has description => 'Find fresh donuts near you!';
 
