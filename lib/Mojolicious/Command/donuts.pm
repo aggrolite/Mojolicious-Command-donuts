@@ -4,6 +4,7 @@ use Mojo::Base 'Mojolicious::Command';
 use Mojo::JSON qw(encode_json);
 use Mojo::Util qw(dumper);
 use Getopt::Long qw(GetOptionsFromArray);
+use WWW::KrispyKreme::HotLight;
 
 our $VERSION = 0.03;
 
@@ -85,28 +86,11 @@ sub run {
     # user may not provide geo
     $self->geo($self->_geocode_ip) unless $self->geo;
 
-    # get Krispy Kreme stores
-    my $tx = $self->ua->get(
-        $hotlight_url => {Referer => $base_url} => form => {
-            responseType => 'Full',
-            lat          => $self->geo->[0],
-            lng          => $self->geo->[1],
-            search       => encode_json(
-                {   Where => {
-                        LocationTypes => [qw(Store Commissary Franchise)],
-                        OpeningDate   => {"ComparisonType" => 0},
-                    },
-                    Take => {Min => 3, DistanceRadius => 100},
-                    PropertyFilters => {Attributes => [qw(FoursquareVenueId OpeningType)]},
-                }
-            )
-        }
-    );
+    my $donuts = WWW::KrispyKreme::HotLight->new(where => $self->geo)->locations;
 
     # pull out the Location key of each store returned
     my @locations =
-      grep { $self->fresh ? $_->{Hotlight} : 1 }
-      map { $_->{Location} } @{$tx->res->json};
+      grep { $self->fresh ? $_->{Hotlight} : 1 } @$donuts;
 
     if ($self->raw) {
         say dumper \@locations;
